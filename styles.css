@@ -1,0 +1,169 @@
+/* Подключаем Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+.form-control {
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+.form-control:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
+}
+
+.btn-primary {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3498db;
+}
+
+.table {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #2980b9;
+    color: #fff;
+    font-weight: 500;
+}
+
+.table td {
+    background-color: #ecf0f1;
+}
+
+.table tr:nth-child(even) td {
+    background-color: #dfe6e9;
+}
+
+.btn-danger {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #e74c3c;
+}
+
+/* Карточки для контактов */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.card-actions {
+    text-align: right;
+}
+
+.card-actions .btn {
+    margin-left: 5px;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary, .btn-danger {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
