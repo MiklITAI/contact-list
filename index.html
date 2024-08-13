@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=index.php">
-    <title>Redirecting...</title>
+    <title>Contact List</title>
 </head>
 <body>
-    <p>If you are not redirected, <a href="index.php">click here</a>.</p>
+    <h1>Contact List</h1>
+    <div id="contacts"></div>
+
+    <script>
+        // Пример использования Fetch API для получения данных с локального сервера
+        fetch('http://localhost:8000/index.php')
+            .then(response => response.json())
+            .then(data => {
+                const contactList = data.map(contact => `<p>${contact.name} - ${contact.phone}</p>`).join('');
+                document.getElementById('contacts').innerHTML = contactList;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
 </body>
 </html>
